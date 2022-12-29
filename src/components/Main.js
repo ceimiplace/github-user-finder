@@ -10,11 +10,16 @@ export default function Main() {
         <section>
           <p className="main-container__header_username">Name</p>
           <a className="main-container__header_link" href="#">
-            Link to page
+            @Link to page
           </a>
           <p className="main-container__header_userjoined">When did he join</p>
         </section>
       </header>
+      <section className="main-container__body">
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio.
+        Quisque volutpat mattis eros.
+      </section>
+      <section className="main-container"></section>
     </main>
   );
 }

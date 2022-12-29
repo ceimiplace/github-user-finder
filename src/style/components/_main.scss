@@ -41,3 +41,14 @@
 
   color: $grey;
 }
+.main-container__body {
+  font-family: $MonoSpace;
+  font-style: normal;
+  font-weight: 400;
+  font-size: $text-xs;
+  line-height: $line-m;
+
+  color: $dark-blue;
+  margin-top: 3.3rem;
+  margin-bottom: 2.3rem;
+}
