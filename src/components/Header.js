@@ -3,7 +3,7 @@ import LightSwitch from "./LightSwitch";
 export default function Header({ children }) {
   return (
     <header className="header">
-      <h1 className="header__heading">devfinder</h1>
+      <p className="header__heading">devfinder</p>
       <LightSwitch isDark={false} />
     </header>
   );

@@ -1,0 +1,26 @@
+.input-container {
+  display: flex;
+  align-items: center;
+  padding: 0.6rem 0.7rem 0.75rem 1.6rem;
+  background-color: $white;
+  border-radius: 15px;
+}
+.input-container__input {
+  flex-grow: 1;
+  border: none;
+  outline: none;
+  padding-left: 1rem;
+}
+.input-container__search_button {
+  font-family: $MonoSpace;
+  padding: 1.3rem 1.6rem;
+  background-color: $blue;
+  font-weight: 700;
+  font-size: $text-xs;
+  line-height: $line-xs;
+  color: $white;
+  border-radius: 1rem;
+  outline: none;
+  box-shadow: none;
+  border: none;
+}

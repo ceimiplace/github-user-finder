@@ -2,12 +2,14 @@ import search from "../assets/icon-search.svg";
 
 export default function Input() {
   return (
-    <div>
+    <form className="input-container">
       <img src={search} />
-      <form>
-        <input type="text" />
-        <button>Search</button>
-      </form>
-    </div>
+      <input
+        type="text"
+        className="input-container__input"
+        placeholder="Search Github Username...."
+      />
+      <button className="input-container__search_button">Search</button>
+    </form>
   );
 }
