@@ -2,3 +2,9 @@
   display: flex;
   justify-content: space-between;
 }
+.header__heading {
+  font-family: $MonoSpace;
+  font-weight: 700;
+  font-size: $text-xl;
+  line-height: $line-xl;
+}

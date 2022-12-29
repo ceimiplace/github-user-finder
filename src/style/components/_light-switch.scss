@@ -3,7 +3,11 @@
   gap: 1.6rem;
   align-items: center;
 }
-.light-switch__para {
+.light-switch__text {
   font-family: $MonoSpace;
-  font-weight: 400;
+  font-weight: 700;
+  font-size: $text-xs;
+  line-height: $line-xs;
+  letter-spacing: 0.25rem;
+  color: $dark-blue;
 }
