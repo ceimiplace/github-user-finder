@@ -22,3 +22,7 @@ html {
   pointer-events: none;
   opacity: 0.4;
 }
+.dark-mode {
+  color: $white !important;
+  background-color: #141d2f !important;
+}

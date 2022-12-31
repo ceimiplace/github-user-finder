@@ -30,7 +30,7 @@ function App() {
   }, [userInput]);
 
   return (
-    <div className="App">
+    <div className="App ">
       <div className="app__wrapper">
         <Header></Header>
         <Input changeMainState={setUserInput} />
