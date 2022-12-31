@@ -111,3 +111,19 @@
   text-decoration: none;
   color: inherit;
 }
+@media screen and (min-width: 768px) {
+  .main-container__header__picture {
+    width: 11.7rem;
+  }
+  .main-container__header_username {
+    font-size: $text-xl;
+    line-height: $line-xl;
+  }
+  .main-container__header_userjoined {
+    font-size: $text-s;
+    line-height: $line-s;
+  }
+}
+
+@media screen and (min-widht: 1440px) {
+}

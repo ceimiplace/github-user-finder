@@ -34,7 +34,7 @@ function App() {
       <div className="app__wrapper">
         <Header></Header>
         <Input changeMainState={setUserInput} />
-        <Main data={userData} />
+        {userData && <Main data={userData} />}
       </div>
     </div>
   );

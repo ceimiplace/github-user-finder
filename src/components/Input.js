@@ -5,7 +5,10 @@ export default function Input({ changeMainState }) {
   const [input, setInput] = useState("");
   function formSubmit(e) {
     e.preventDefault();
-    changeMainState(input);
+
+    let word = input.split(" ").join("");
+    setInput(word);
+    changeMainState(word);
   }
   return (
     <form className="input-container" onSubmit={formSubmit}>
