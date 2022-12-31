@@ -8,24 +8,24 @@ function App() {
   const [userInput, setUserInput] = useState("");
   const [userData, setUserData] = useState("");
   useEffect(() => {
-    async function SearchUser(input) {
-      // fetch("https://api.github.com/users/" + input)
-      //   .then((resp) => resp.json())
-      //   .then((data) => {
-      //     console.log(data);
-      //     setUserData(data);
-      //   });
-      const octokit = new Octokit({
-        auth: "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",
-      });
+    function SearchUser(input) {
+      fetch("https://api.github.com/users/" + input)
+        .then((resp) => resp.json())
+        .then((data) => {
+          console.log(data);
+          setUserData(data);
+        });
+      // const octokit = new Octokit({
+      //   auth: "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",
+      // });
 
-      const denis = await octokit.request("GET /users/{ceimiplace}", {
-        username: "ceimiplace",
-      });
-      console.log(denis);
+      // const denis = await octokit.request("GET /users/{ceimiplace}", {
+      //   username: "ceimiplace",
+      // });
+      // console.log(denis);
     }
     if (userInput) {
-      SearchUser();
+      SearchUser(userInput);
     }
   }, [userInput]);
 
@@ -34,7 +34,7 @@ function App() {
       <div className="app__wrapper">
         <Header></Header>
         <Input changeMainState={setUserInput} />
-        <Main />
+        <Main data={userData} />
       </div>
     </div>
   );

@@ -16,3 +16,9 @@ html {
   padding: 3.1rem 2.4rem;
   margin: 0 auto;
 }
+.link--disabled {
+  text-decoration: none;
+  color: inherit;
+  pointer-events: none;
+  opacity: 0.4;
+}
