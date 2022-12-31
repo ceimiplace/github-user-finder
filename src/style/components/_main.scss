@@ -104,7 +104,7 @@
 }
 .main-container__links__section {
   display: flex;
-  gap: 1.3rem;
+  gap: 1.9rem;
   align-items: center;
 }
 .default_link {
@@ -123,7 +123,31 @@
     font-size: $text-s;
     line-height: $line-s;
   }
+  .main-container__body {
+    font-size: $text-s;
+    line-height: $line-m;
+  }
+  .main-container__social__element__text {
+    font-size: $text-s;
+    line-height: $line-s;
+  }
+  .main-container__social__element__value {
+    font-size: $text-l;
+    line-height: $line-l;
+  }
+  .main-container__links {
+    font-size: $text-s;
+    line-height: $line-s;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+  }
 }
 
 @media screen and (min-widht: 1440px) {
+  .main-container__header_username {
+    font-size: $text-xl;
+    line-height: $line-xl;
+  }
 }
