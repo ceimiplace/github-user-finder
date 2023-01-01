@@ -5,6 +5,7 @@ export default function LightSwitch({ setDarkMode, darkMode }) {
     <div className="light-switch">
       <p className="light-switch__text">{darkMode ? "Light" : "Dark"}</p>
       <img
+        alt="light mode switch"
         onClick={() => setDarkMode(!darkMode)}
         src={darkMode ? lighticon : darkicon}
       />

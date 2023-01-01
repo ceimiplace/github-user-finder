@@ -12,7 +12,7 @@ export default function Input({ changeMainState }) {
   }
   return (
     <form className="input-container" onSubmit={formSubmit}>
-      <img src={search} />
+      <img src={search} alt="magnifying glass" />
       <input
         type="text"
         className="input-container__input"
@@ -20,7 +20,9 @@ export default function Input({ changeMainState }) {
         value={input}
         onChange={(e) => setInput(e.target.value)}
       />
-      <button className="input-container__search_button">Search</button>
+      <button type=" submit" className="input-container__search_button">
+        Search
+      </button>
     </form>
   );
 }

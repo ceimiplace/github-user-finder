@@ -56,7 +56,7 @@ export default function Main({ data }) {
             !data.location ? "link--disabled " : ""
           }`}
         >
-          <img src={location} />
+          <img src={location} alt="location marker" />
           <p>{data.location ? data.location : "Not Available"}</p>
         </div>
         <div
@@ -64,7 +64,7 @@ export default function Main({ data }) {
             !data.blog ? "link--disabled " : ""
           }`}
         >
-          <img src={website} />
+          <img src={website} alt="website general logo" />
           <a href={data.blog} target="_blank" className="default_link">
             {data.blog ? "Website" : "Not Available"}
           </a>
@@ -74,7 +74,7 @@ export default function Main({ data }) {
             !data.twitter_username ? "link--disabled " : ""
           }`}
         >
-          <img src={twitter} />
+          <img src={twitter} alt="twitter logo" />
           <a
             href={"https://twitter.com/" + data.twitter_username}
             target="_blank"
@@ -88,7 +88,7 @@ export default function Main({ data }) {
             !data.html_url ? "link--disabled " : ""
           }`}
         >
-          <img src={company} />
+          <img src={company} alt="company logo" />
           <a href={data.html_url} target="_blank" className="default_link">
             {data.html_url ? "@github" : "Not Available"}
           </a>
