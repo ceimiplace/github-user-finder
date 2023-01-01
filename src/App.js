@@ -32,7 +32,7 @@ function App() {
   return (
     <div className={`App ${darkMode ? "dark-mode" : ""}`}>
       <div className="app__wrapper">
-        <Header></Header>
+        <Header setDarkMode={setDarkMode} darkMode={darkMode}></Header>
 
         <Input changeMainState={setUserInput} />
         {(userData || error) && (
