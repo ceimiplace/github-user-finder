@@ -15,7 +15,9 @@ export default function Main({ data }) {
           className="main-container__header__picture"
         />
         <section>
-          <p className="main-container__header_username">{data.name}</p>
+          <p className="main-container__header_username">
+            {data.name ? data.name : data.login}
+          </p>
           <p className="main-container__header_link">@{data.login}</p>
           <p className="main-container__header_userjoined">
             Joined {returnDate(data.created_at)}
@@ -55,7 +57,7 @@ export default function Main({ data }) {
           }`}
         >
           <img src={location} />
-          <p>{data.location}</p>
+          <p>{data.location ? data.location : "Not Available"}</p>
         </div>
         <div
           className={`main-container__links__section " + ${
@@ -64,7 +66,7 @@ export default function Main({ data }) {
         >
           <img src={website} />
           <a href={data.blog} target="_blank" className="default_link">
-            website
+            {data.blog ? "Website" : "Not Available"}
           </a>
         </div>
         <div
@@ -78,7 +80,7 @@ export default function Main({ data }) {
             target="_blank"
             className="default_link"
           >
-            Twitter
+            {data.twitter_username ? "Twitter" : "Not Available"}
           </a>
         </div>
         <div
@@ -88,7 +90,7 @@ export default function Main({ data }) {
         >
           <img src={company} />
           <a href={data.html_url} target="_blank" className="default_link">
-            @github
+            {data.html_url ? "@github" : "Not Available"}
           </a>
         </div>
       </section>

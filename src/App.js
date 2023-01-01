@@ -7,6 +7,7 @@ function App() {
   const [userInput, setUserInput] = useState("");
   const [userData, setUserData] = useState("");
   const [error, setError] = useState("");
+  const [darkMode, setDarkMode] = useState(true);
   useEffect(() => {
     function SearchUser(input) {
       setError("");
@@ -29,7 +30,7 @@ function App() {
   }, [userInput]);
 
   return (
-    <div className="App ">
+    <div className={`App ${darkMode ? "dark-mode" : ""}`}>
       <div className="app__wrapper">
         <Header></Header>
 

@@ -1,0 +1,23 @@
+.dark-mode {
+  background-color: #141d2f;
+  .light-switch__text {
+    color: $white !important;
+  }
+  .input-container,
+  .main-container {
+    background-color: #1e2a47;
+  }
+  .input-container__input {
+    background-color: #1e2a47;
+    color: $white;
+  }
+  .main-container * {
+    color: white !important;
+  }
+  .main-container__social {
+    background-color: #141d2f;
+  }
+  .main-container__header_link {
+    color: $blue !important;
+  }
+}
