@@ -5,6 +5,7 @@ import location from "../assets/icon-location.svg";
 import returnDate from "./Helpers";
 //"https://s3.amazonaws.com/media.eremedia.com/uploads/2013/05/23151721/Octocat.jpg"
 export default function Main({ data }) {
+  console.log(data);
   return (
     <>
       <header className="main-container__header">
@@ -15,9 +16,7 @@ export default function Main({ data }) {
         />
         <section>
           <p className="main-container__header_username">{data.name}</p>
-          <a className="main-container__header_link" href="#">
-            @Link to page
-          </a>
+          <p className="main-container__header_link">@{data.login}</p>
           <p className="main-container__header_userjoined">
             Joined {returnDate(data.created_at)}
           </p>
