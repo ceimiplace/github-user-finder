@@ -6,7 +6,7 @@ import returnDate from "./Helpers";
 //"https://s3.amazonaws.com/media.eremedia.com/uploads/2013/05/23151721/Octocat.jpg"
 export default function Main({ data }) {
   return (
-    <main className="main-container ">
+    <>
       <header className="main-container__header">
         <img
           src={data.avatar_url}
@@ -93,6 +93,6 @@ export default function Main({ data }) {
           </a>
         </div>
       </section>
-    </main>
+    </>
   );
 }

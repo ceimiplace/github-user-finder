@@ -1,28 +1,27 @@
-import { getSuggestedQuery } from "@testing-library/react";
 import Input from "./components/Input";
 import Header from "./components/Header";
 import Main from "./components/Main";
 import { useEffect, useState } from "react";
-import { Octokit } from "https://cdn.skypack.dev/@octokit/core";
+
 function App() {
   const [userInput, setUserInput] = useState("");
   const [userData, setUserData] = useState("");
+  const [error, setError] = useState("");
   useEffect(() => {
     function SearchUser(input) {
+      setError("");
+      setUserData("");
       fetch("https://api.github.com/users/" + input)
-        .then((resp) => resp.json())
+        .then((resp) => {
+          return resp.json();
+        })
         .then((data) => {
-          console.log(data);
+          if (data.message) {
+            throw new Error(data.message);
+          }
           setUserData(data);
-        });
-      // const octokit = new Octokit({
-      //   auth: "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",
-      // });
-
-      // const denis = await octokit.request("GET /users/{ceimiplace}", {
-      //   username: "ceimiplace",
-      // });
-      // console.log(denis);
+        })
+        .catch((err) => setError(err.message));
     }
     if (userInput) {
       SearchUser(userInput);
@@ -33,8 +32,14 @@ function App() {
     <div className="App ">
       <div className="app__wrapper">
         <Header></Header>
+
         <Input changeMainState={setUserInput} />
-        {userData && <Main data={userData} />}
+        {(userData || error) && (
+          <div className="main-container">
+            {userData && <Main data={userData} />}
+            {error && <div className="error-container">{error}</div>}
+          </div>
+        )}
       </div>
     </div>
   );

@@ -1,0 +1,10 @@
+.error-container {
+  color: red;
+  font-family: $MonoSpace;
+  font-weight: 700;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  font-size: $text-l;
+}
