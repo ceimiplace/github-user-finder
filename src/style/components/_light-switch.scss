@@ -12,5 +12,10 @@
   color: $dark-blue;
 }
 .light-switch-button {
+}
+.dark-mode-button {
+  padding: 0.5rem;
+  background-color: inherit;
+  border: none;
   cursor: pointer;
 }
